@@ -14,23 +14,22 @@ require.config({
 
 require([
 	'app/router',
-	'libs/stateEvents',
 	'libs/delegateEvents'
-], function(Router, stateEvents) {
-	var currentUser = false; // Replace with onboardLib.getCurrentUser();
+], function(Router) {
+	//var currentUser = false; // Replace with onboardLib.getCurrentUser();
 
 	var appRouter = new Router();
 	Backbone.history.start();
 
-	if(currentUser) {
-		// trigger event to add logged in
-		stateEvents.trigger("isLoggedIn");
+	// if(currentUser) {
+	// 	// trigger event to add logged in
+	// 	stateEvents.trigger("isLoggedIn");
 
-		appRouter.navigate('', true);
-	}else{
-		appRouter.navigate('onboard', true);
+		//appRouter.navigate('', true);
+	// }else{
+	// 	appRouter.navigate('onboard', true);
 
-		// On error for parse sends user back to /onboard
-	}
+	// 	// On error for parse sends user back to /onboard
+	// }
 
 });

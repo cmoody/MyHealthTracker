@@ -42,7 +42,7 @@ define(function(require) {
 
     initialize: function() {
       this.addHeader();
-      this.addFooter();
+      //this.addFooter();
       this.addSlideNav();
     },
 
